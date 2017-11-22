@@ -1,0 +1,1 @@
+Solver for simple equations
