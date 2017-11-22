@@ -1,0 +1,1 @@
+("6.11" ("a6d594ff40ab05f1e482a4afe5587d5cfa52aa21" . "0312b85ab6887209b0dc46004be75f14c573729e") #"/Users/parkerknight/Dropbox/programming/rackulus/funcs.rkt" #"/Users/parkerknight/Dropbox/programming/rackulus/parser.rkt" (collects #"errortrace" #"errortrace-key.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt"))
