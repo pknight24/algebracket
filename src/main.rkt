@@ -1,5 +1,5 @@
 #lang racket
-(require "parser.rkt" "funcs.rkt")
+(require "parser.rkt" "funcs.rkt" "plug.rkt")
 
 
 ;;TODO: write a proper help menu
@@ -11,7 +11,10 @@
          (val (getVal in))]
     (cond [(equal? in 'help) (showHelp)]
           [(equal? in 'exit) (exit)]
-          [else in])))
+          [else 
+            (if (null? val)
+            (plug in val)
+            (plug (take in (- (length in) 2)) val))])))
 
 (define (loop f)
   (f)
@@ -19,4 +22,4 @@
 
 
 
-;;(loop getInput)
+(getInput)

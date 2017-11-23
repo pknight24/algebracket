@@ -1,7 +1,7 @@
 #lang racket
 
 
-(provide mult? sub? convSub add? div? convDiv exp?)
+(provide mult? sub? convSub add? div? convDiv exp? ^)
 
 ;;determines if an expression is multiplication
 (define (mult? l)
@@ -44,3 +44,9 @@
         [(and (list? l) (> (length l) 1))
          (if (eq? (cadr l) '^) #t #f)]
         [else #f]))
+
+(define (^ x n)
+  (if (= n 0)
+    1
+    (* x (^ x (- n 1)))))
+

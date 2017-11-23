@@ -6,7 +6,7 @@
 (define (getVal l)
   (if (and (list? l) (not (null? (cdr l))))
     (if (eq? 'at (car l))
-          (car (cdr l))
+          (cadr l)
           (getVal (cdr l)))
     null))
 
