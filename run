@@ -1,0 +1,10 @@
+#lang racket
+
+(require "src/main.rkt")
+
+(display "Welcome to algebracket!")
+(newline)
+(display "Enter an equation, or type 'help' for help")
+(newline)
+
+(loop getInput)

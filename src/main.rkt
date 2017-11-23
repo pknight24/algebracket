@@ -1,9 +1,11 @@
 #lang racket
 (require "parser.rkt" "funcs.rkt" "plug.rkt")
-
+(provide getInput loop)
 
 ;;TODO: write a proper help menu
-(define (showHelp) (display "Help menu"))
+(define (showHelp) 
+  (display "Help menu") 
+  (newline))
 
 
 (define (getInput)
@@ -13,13 +15,10 @@
           [(equal? in 'exit) (exit)]
           [else 
             (if (null? val)
-            (plug in val)
-            (plug (take in (- (length in) 2)) val))])))
+            (display (plug in val))
+            (display (plug (take in (- (length in) 2)) val)))])))
 
 (define (loop f)
   (f)
+  (newline)
   (loop f))
-
-
-
-(getInput)
