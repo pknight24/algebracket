@@ -8,7 +8,9 @@ Algebracket solves simple math equations, with or without variables.
 Then, run:</p>
 
 >git clone https://github.com/pknight24/algebracket
+
 >cd algebracket
+
 >racket run
 
 <p>and the program will start.</p>
@@ -24,5 +26,9 @@ You can pass more complicated equations by using lots and lots of parentheses. E
 
 >((x ^ 2) + (5 * x) + 4 at 3)
 
-<p>which will evaluate to 28.</p>
+<p>which will evaluate to 28. You can also pass an expression without any variables, such as: </p>
+
+>((5 * 2) + 2)
+
+<p> which evaluates to 12. Exit the 'repl' at any time by typing 'exit'.</p>
 
