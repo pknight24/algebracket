@@ -4,9 +4,19 @@
 
 ;;TODO: write a proper help menu
 (define (showHelp) 
-  (display "Help menu") 
+  (newline)
+  (display "Using Algebracket") 
+  (newline)
+  (newline)
+  (display "Equations must be passed in parentheses like so: (1 + 3), with spaces between all the terms.")
+  (newline)
+  (display "If you have an equation with a variable, and want to plug in that variables, do so like this: (1 + x at 4). This will evaluate to 5.")
+  (newline)
+  (display "Order of operations must be designated with parentheses. Example: ((x * 2) + 4)")
+  (newline)
+  (newline)
+  (display "Type 'exit' at anytime to quit the program")
   (newline))
-
 
 (define (getInput)
   (let* [(in (read))
