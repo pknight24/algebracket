@@ -19,6 +19,7 @@
   (newline))
 
 (define (getInput)
+  (display "> ")
   (let* [(in (read))
          (val (getVal in))]
     (cond [(equal? in 'help) (showHelp)]
