@@ -18,3 +18,4 @@
         [(list? (car l)) (if (hasX (car l)) #t (hasX (cdr l)))]
         [(not (null? (cdr l))) (hasX (cdr l))]
         [else #f]))
+

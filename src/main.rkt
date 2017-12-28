@@ -24,6 +24,7 @@
          (val (getVal in))]
     (cond [(equal? in 'help) (showHelp)]
           [(equal? in 'exit) (exit)]
+          [(not (list? in)) (display "Unrecognized command -- type 'help' for more information.")]
           [else 
             (if (null? val)
             (display (plug in val))
